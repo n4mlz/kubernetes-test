@@ -6,6 +6,7 @@ metadata:
 spec:
   project: default
   source:
+    chart: ingress-nginx
     repoURL: https://github.com/helm/charts.git
     targetRevision: 4.10.1
     path: ingress-nginx/ingress-nginx

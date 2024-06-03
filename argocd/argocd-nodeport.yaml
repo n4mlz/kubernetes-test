@@ -1,15 +1,19 @@
-apiVersion: v1
-kind: Service
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
-  name: self-argocd-server-nodeport
+  name: argocd-nodeport
   namespace: argocd
 spec:
-  ports:
-  - name: port-1
-    port: 8080
-    protocol: TCP
-    targetPort: 8080
-    nodePort: 30000
-  selector:
-    app.kubernetes.io/name: argocd-server
-  type: NodePort
+  project: default
+  source:
+    repoURL: 'https://github.com/n4mlz/kubernates-test.git'
+    path: argocd
+    targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+

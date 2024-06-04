@@ -1,0 +1,15 @@
+alertmanager:
+  ingress:
+    enabled: true
+    hosts:
+      - alertmanager.kubernates-test
+grafana:
+  ingress:
+    enabled: true
+    hosts:
+      - grafana.kubernates-test
+prometheus:
+  ingress:
+    enabled: true
+    hosts:
+      - prometheus.kubernates-test

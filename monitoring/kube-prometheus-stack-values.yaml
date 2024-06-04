@@ -3,19 +3,19 @@ alertmanager:
     enabled: true
     hosts:
       - localhost
-    path:
-      - /alertmanager/
+    paths:
+      - /alertmanager
 grafana:
   ingress:
     enabled: true
     hosts:
       - localhost
-    path:
-      - /grafana/
+    paths:
+      - /grafana
 prometheus:
   ingress:
     enabled: true
     hosts:
       - localhost
-    path:
-      - /prometheus/
+    paths:
+      - /prometheus

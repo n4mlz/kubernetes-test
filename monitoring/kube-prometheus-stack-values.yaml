@@ -2,20 +2,20 @@ alertmanager:
   ingress:
     enabled: true
     hosts:
-      - localhost
+      - kubernates-test
     paths:
       - /alertmanager
 grafana:
   ingress:
     enabled: true
     hosts:
-      - localhost
+      - kubernates-test
     paths:
       - /grafana
 prometheus:
   ingress:
     enabled: true
     hosts:
-      - localhost
+      - kubernates-test
     paths:
       - /prometheus

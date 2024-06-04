@@ -14,18 +14,15 @@ spec:
       - name: "alertmanager.ingress.enabled"
         value: "true"
       - name: "alertmanager.ingress.hosts"
-        value:
-          - ["alertmanager.kubernates-test"]
+        value: ["alertmanager.kubernates-test"]
       - name: "grafana.ingress.enabled"
         value: "true"
       - name: "grafana.ingress.hosts"
-        value:
-          - ["grafana.kubernates-test"]
+        value: ["grafana.kubernates-test"]
       - name: "prometheus.ingress.enabled"
         value: "true"
       - name: "prometheus.ingress.hosts"
-        value:
-          - ["prometheus.kubernates-test"]
+        value: ["prometheus.kubernates-test"]
   destination:
     server: https://kubernetes.default.svc
     namespace: prometheus

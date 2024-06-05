@@ -6,9 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: registry-1.docker.io/bitnamicharts
-    chart: etcd
-    path: etcd
+    repoURL: https://charts.bitnami.com/bitnami
+    chart: bitnami/etcd
     targetRevision: 10.1.4
   destination:
     server: https://kubernetes.default.svc

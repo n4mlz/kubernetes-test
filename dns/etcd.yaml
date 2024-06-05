@@ -9,7 +9,7 @@ spec:
     repoURL: https://github.com/helm/charts.git
     chart: etcd-operator
     path: stable/etcd-operator
-    targetRevision: main
+    targetRevision: 0.11.2
   destination:
     server: https://kubernetes.default.svc
     namespace: etcd-operator

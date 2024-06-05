@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: etcd-operator
+  namespace: argocd
+spec:
+  project: default
+  sources:
+  - repoURL: https://github.com/helm/charts.git
+    chart: stable/etcd-operator
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: etcd-operator
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    - ServerSideApply=true
+    automated:
+      prune: true
+      selfHeal: true

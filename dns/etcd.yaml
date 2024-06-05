@@ -5,9 +5,10 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  sources:
-  - repoURL: https://github.com/helm/charts.git
+  source:
+    repoURL: https://github.com/helm/charts.git
     chart: stable/etcd-operator
+    path: stable/etcd-operator
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc

@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://charts.bitnami.com/bitnami
-    chart: bitnami/etcd
+    chart: etcd
     targetRevision: 10.1.4
   destination:
     server: https://kubernetes.default.svc

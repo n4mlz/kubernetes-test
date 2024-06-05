@@ -1,17 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: etcd-operator
+  name: etcd
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/helm/charts.git
-    chart: stable/etcd-operator
-    path: stable/etcd-operator
+    repoURL: registry-1.docker.io/bitnamicharts
+    chart: etcd
+    path: etcd
+    targetRevision: 10.1.4
   destination:
     server: https://kubernetes.default.svc
-    namespace: etcd-operator
+    namespace: etcd
   syncPolicy:
     syncOptions:
     - CreateNamespace=true

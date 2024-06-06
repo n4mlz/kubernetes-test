@@ -2,20 +2,20 @@ alertmanager:
   ingress:
     enabled: true
     hosts:
-      - kubernates-test
+      - alertmanager.kubernetes-test.n4mlz.dev
     paths:
-      - /alertmanager
+      - /
 grafana:
   ingress:
     enabled: true
     hosts:
-      - kubernates-test
+      - grafana.kubernetes-test.n4mlz.dev
     paths:
-      - /grafana
+      - /
 prometheus:
   ingress:
     enabled: true
     hosts:
-      - kubernates-test
+      - prometheus.k8s.n4mlz.dev
     paths:
-      - /prometheus
+      - /

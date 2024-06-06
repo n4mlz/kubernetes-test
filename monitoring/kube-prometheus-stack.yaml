@@ -12,7 +12,7 @@ spec:
     helm:
       valueFiles:
         - $values/monitoring/kube-prometheus-stack-values.yaml
-  - repoURL: https://github.com/n4mlz/kubernates-test.git
+  - repoURL: https://github.com/n4mlz/kubernetes-test.git
     targetRevision: HEAD
     ref: values
   destination:

@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/n4mlz/kubernates-test.git'
+    repoURL: 'https://github.com/n4mlz/kubernetes-test.git'
     path: argocd
     targetRevision: HEAD
   destination:

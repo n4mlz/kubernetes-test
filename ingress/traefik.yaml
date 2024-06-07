@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: traefik
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://traefik.github.io/charts
+    chart: traefik
+    targetRevision: 28.2.0
+    helm:
+      parameters:
+      - name: "ingressClass.enabled"
+        value: "true"
+      - name: "ingressClass.isDefaultClass"
+        value: "true"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    syncOptions:
+    - ServerSideApply=true
+    automated:
+      prune: true
+      selfHeal: true
+

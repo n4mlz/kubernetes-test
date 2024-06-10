@@ -4,7 +4,7 @@ metadata:
   name: argocd-server-lb
   namespace: argocd
   annotations:
-    svccontroller.k3s.cattle.io/enablelb: true
+    svccontroller.k3s.cattle.io/enablelb: "true"
 spec:
   ports:
   - port: 80

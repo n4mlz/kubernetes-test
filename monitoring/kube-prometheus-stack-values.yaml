@@ -1,21 +1,22 @@
 alertmanager:
   ingress:
     enabled: true
-    hosts:
-      - alertmanager.kubernetes-test.n4mlz.dev
-    paths:
-      - /
+    ingressClassName: tailscale
+    tls:
+      - hosts:
+        - alartmanager
 grafana:
   ingress:
     enabled: true
-    hosts:
-      - grafana.kubernetes-test.n4mlz.dev
-    paths:
-      - /
+    ingressClassName: tailscale
+    tls:
+      - hosts:
+        - grafana
 prometheus:
   ingress:
     enabled: true
-    hosts:
-      - prometheus.k8s.n4mlz.dev
-    paths:
-      - /
+    ingressClassName: tailscale
+    tls:
+      - hosts:
+        - prometheus
+

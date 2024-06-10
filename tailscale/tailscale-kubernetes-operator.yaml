@@ -12,15 +12,9 @@ spec:
     helm:
       parameters:
       - name: "oauth.clientId"
-        valueFrom:
-          secretKeyRef:
-            name: tailscale-kubernetes-operator-secret
-            key: CLIENT_ID
+        value: CLIENT_ID
       - name: "oauth.clientSecret"
-        valueFrom:
-          secretKeyRef:
-            name: tailscale-kubernetes-operator-secret
-            key: CLIENT_SECRET
+        value: CLIENT_SECRET
   destination:
     server: https://kubernetes.default.svc
     namespace: tailscale

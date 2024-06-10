@@ -10,11 +10,17 @@ spec:
     chart: tailscale-operator
     targetRevision: 1.66.4
     helm:
-      valueFiles:
-        - $values/tailscale/tailscale-kubernetes-operator-values.yaml
-  - repoURL: https://github.com/n4mlz/kubernetes-test.git
-    targetRevision: HEAD
-    ref: values
+      parameters:
+      - name: "oauth.clientId"
+        valueFrom:
+          secretKeyRef:
+            name: tailscale-kubernetes-operator-secret
+            key: CLIENT_ID
+      - name: "oauth.clientSecret"
+        valueFrom:
+          secretKeyRef:
+            name: tailscale-kubernetes-operator-secret
+            key: CLIENT_SECRET
   destination:
     server: https://kubernetes.default.svc
     namespace: tailscale

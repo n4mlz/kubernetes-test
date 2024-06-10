@@ -1,2 +1,2 @@
 tailscale-secret.yaml
-tailscale-kubernetes-operator-values.yaml
+tailscale-kubernetes-operator-secret.yaml

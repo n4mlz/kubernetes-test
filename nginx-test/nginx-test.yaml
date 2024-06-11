@@ -11,8 +11,11 @@ spec:
     targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: argocd
+    namespace: nginx-test
   syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    - ServerSideApply=true
     automated:
       prune: true
       selfHeal: true

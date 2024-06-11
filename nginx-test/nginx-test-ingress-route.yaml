@@ -1,15 +1,21 @@
-apiVersion: traefik.containo.us/v1alpha1
-kind: IngressRoute
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
   name: nginx-test
   namespace: kube-system
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
-  entryPoints:
-    - web
+  rules:
   routes:
-    - match: Host(`nginx-test.n4mlz.dev`)
-      kind: Rule
-      services:
-        - name: nginx-test-service
-          port: 80
+    - host: nginx-test.n4mlz.dev
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: nginx-test-service
+                port:
+                  number: 80
 

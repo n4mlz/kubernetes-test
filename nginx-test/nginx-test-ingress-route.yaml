@@ -7,7 +7,6 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
   rules:
-  routes:
     - host: nginx-test.n4mlz.dev
       http:
         paths:

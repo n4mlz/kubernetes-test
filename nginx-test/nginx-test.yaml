@@ -5,17 +5,14 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  sources:
-  - repoURL: https://charts.bitnami.com/bitnami
-    chart: nginx
-    targetRevision: 18.0.3
+  source:
+    repoURL: 'https://github.com/n4mlz/kubernetes-test.git'
+    path: nginx-test
+    targetRevision: HEAD
   destination:
-    server: https://kubernetes.default.svc
-    namespace: nginx-test
+    server: 'https://kubernetes.default.svc'
+    namespace: argocd
   syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
-    - ServerSideApply=true
     automated:
       prune: true
       selfHeal: true

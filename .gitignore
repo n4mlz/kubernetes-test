@@ -1,3 +1,6 @@
 tailscale-secret.yaml
 tailscale-kubernetes-operator.yaml
 tailscale-kubernetes-operator-secret.yaml
+
+ip-address-pool.yaml
+

@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nginx-test
-  namespace: kube-system
+  name: nginx-test-ingress
+  namespace: nginx-test
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
@@ -15,7 +15,6 @@ spec:
             backend:
               service:
                 name: nginx-test-service
-                namespace: nginx-test
                 port:
                   number: 80
 

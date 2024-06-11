@@ -15,6 +15,7 @@ spec:
             backend:
               service:
                 name: nginx-test-service
+                namespace: nginx-test
                 port:
                   number: 80
 

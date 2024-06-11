@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: blog-service
+  labels:
+    run: blog
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: blog
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blog-deployment
+spec:
+  selector:
+    matchLabels:
+      run: blog
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: blog
+    spec:
+      containers:
+      - name: blog
+        image: ghcr.io/n4mlz/blog-posts:sha-d1d50463b75e469447b0617b77ec33078a9eed01
+        ports:
+        - containerPort: 8080

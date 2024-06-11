@@ -7,7 +7,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
   rules:
-    - host: blog.n4mlz.dev
+    - host: n4mlz.dev
       http:
         paths:
           - pathType: Prefix

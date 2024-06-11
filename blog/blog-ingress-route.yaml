@@ -16,4 +16,4 @@ spec:
               service:
                 name: blog-service
                 port:
-                  number: 81
+                  number: 80

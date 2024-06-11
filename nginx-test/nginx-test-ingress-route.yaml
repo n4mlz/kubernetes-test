@@ -17,4 +17,3 @@ spec:
                 name: nginx-test-service
                 port:
                   number: 80
-

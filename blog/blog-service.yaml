@@ -27,6 +27,6 @@ spec:
     spec:
       containers:
       - name: blog
-        image: ghcr.io/n4mlz/blog-posts:sha-2e32d3351e194f0ba11d8c57a120d31cce5a2cfb
+        image: ghcr.io/n4mlz/blog-posts:sha-79d3fe2e282c199315f835da99fbaf2278b6a44c
         ports:
         - containerPort: 80
